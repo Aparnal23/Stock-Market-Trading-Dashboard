@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nytt Hub Trading Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-text">NYTT HUB</span>
+                <span class="logo-subtext">TERMINAL</span>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item"><span class="label">SYMBOL</span><span class="value">INFY.BSE</span></div>
+                <div class="stat-item"><span class="label">STATUS</span><span class="value status-live">● LIVE</span></div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="chart-container">
+                <div id="chart"></div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="panel controls-panel">
+                    <h2>Order Entry</h2>
+                    <div class="price-display">
+                        <span class="price-label">CURRENT PRICE</span>
+                        <span id="current-price" class="price-value">---.--</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-buy" onclick="buy()">
+                            <span class="btn-text">BUY</span>
+                        </button>
+                        <button class="btn btn-sell" onclick="sell()">
+                            <span class="btn-text">SELL</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel log-panel">
+                    <h2>Trade Log</h2>
+                    <div id="log" class="trade-list">
+                        <!-- Trade entries will appear here -->
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
